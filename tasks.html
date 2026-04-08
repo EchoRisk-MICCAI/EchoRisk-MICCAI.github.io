@@ -17,12 +17,12 @@
 <div class="bg-grid"></div>
 
 <nav>
-    <div style="display: flex; align-items: center; gap: 24px; height: 56px;">
+    <div style="display: flex; align-items: center; gap: 24px;">
 
         <a href="index.html" class="nav-logo"
-           style="text-decoration: none; display: flex; align-items: center; gap: 14px; height: 100%;">
+           style="text-decoration: none; display: flex; align-items: center; gap: 12px;">
             <div class="logo-icon"
-                 style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; min-width: 48px;">
+                 style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; min-width: 44px;">
                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
                      style="width: 100%; height: 100%; display: block;">
                     <circle cx="50" cy="50" r="48" fill="#04080f"/>
@@ -59,18 +59,17 @@
                             stroke-linejoin="round"/>
                 </svg>
             </div>
-
             <span class="logo-text"
-                  style="font-size: 26px; line-height: 1; margin: 0; display: flex; align-items: center;">
-      <span>Echo</span>Risk-MICCAI
-    </span>
+                  style="font-size: 24px; line-height: 1; margin: 0; display: flex; align-items: center; color: #ffffff;">
+                <span style="color: var(--accent);">Echo</span>Risk-MICCAI
+            </span>
         </a>
 
         <a href="https://conferences.miccai.org/2026/en/default.asp" target="_blank" rel="noopener noreferrer"
-           style="display: flex; align-items: center; border-left: 1px solid var(--border); padding-left: 24px; height: 100%;">
+           style="display: flex; align-items: center; border-left: 1px solid var(--border); padding-left: 24px;">
             <img src="assets/miccai2026-logo.png" alt="MICCAI 2026"
-                 style="height: 64px; object-fit: contain; display: block; margin-bottom: 6px; transition: transform 0.2s ease;"
-                 onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                 style="height: 110px; width: auto; object-fit: contain; display: block; transition: transform 0.2s ease;"
+                 onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
         </a>
 
     </div>
@@ -96,37 +95,131 @@
     </ul>
 </nav>
 
-<section id="tasks" class="page-header">
+<!-- ── TASKS ── -->
+<section id="tasks">
     <div class="container">
         <p class="section-label">// Challenge Tasks</p>
         <h2 class="section-title">Three Independent Tasks</h2>
-        <p class="section-desc">Each task addresses a distinct clinical problem. Teams may participate in one, two, or
-            all three — with independent leaderboards and awards per task.</p>
+        <!--        <p class="section-desc">-->
+        <!--            Three tasks, one clinical arc: <em>measure cardiac function → detect dysfunction → predict risk before it-->
+        <!--            occurs.</em>-->
+        <!--            Teams may participate in one, two, or all three — with independent leaderboards and awards per task.-->
+        <!--        </p>-->
+        <div class="clinical-arc">
+            <svg width="100%" viewBox="0 0 680 190" role="img"
+                 aria-label="Three clinical tasks spanning cardiotoxicity surveillance">
+                <defs>
+                    <marker id="arc-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5"
+                            orient="auto-start-reverse">
+                        <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </marker>
+                </defs>
+
+                <text x="222" y="16" text-anchor="middle"
+                      font-family="var(--mono-font)" font-size="10" fill="var(--muted)" letter-spacing="0.1em">
+                    DIAGNOSTIC ASSESSMENTS
+                </text>
+                <line x1="30" y1="24" x2="414" y2="24"
+                      stroke="rgba(255,255,255,0.1)" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+                <text x="554" y="16" text-anchor="middle"
+                      font-family="var(--mono-font)" font-size="10" fill="var(--muted)" letter-spacing="0.1em">
+                    PROGNOSTIC GOAL
+                </text>
+                <line x1="458" y1="24" x2="650" y2="24"
+                      stroke="rgba(255,255,255,0.1)" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+                <!-- Task 1 -->
+                <rect x="30" y="34" width="172" height="96" rx="8"
+                      fill="rgba(0,201,167,0.07)" stroke="rgba(0,201,167,0.25)" stroke-width="0.5"/>
+                <text x="116" y="57" text-anchor="middle" dominant-baseline="central"
+                      font-family="var(--mono-font)" font-size="10" fill="var(--accent)" letter-spacing="0.06em">
+                    Functional metric
+                </text>
+                <line x1="56" y1="67" x2="176" y2="67" stroke="rgba(0,201,167,0.15)" stroke-width="0.5"/>
+                <text x="116" y="87" text-anchor="middle" dominant-baseline="central"
+                      font-family="var(--heading-font)" font-size="16" fill="var(--text)">Measure
+                </text>
+                <text x="116" y="109" text-anchor="middle" dominant-baseline="central"
+                      font-family="var(--body-font)" font-size="12" fill="var(--muted)">LVEF estimation
+                </text>
+
+                <line x1="204" y1="82" x2="242" y2="82"
+                      stroke="rgba(255,255,255,0.12)" stroke-width="0.8" fill="none"/>
+
+                <!-- Task 2 -->
+                <rect x="244" y="34" width="172" height="96" rx="8"
+                      fill="rgba(79,142,255,0.07)" stroke="rgba(79,142,255,0.25)" stroke-width="0.5"/>
+                <text x="330" y="57" text-anchor="middle" dominant-baseline="central"
+                      font-family="var(--mono-font)" font-size="10" fill="var(--accent2)" letter-spacing="0.06em">State
+                    classification
+                </text>
+                <line x1="270" y1="67" x2="390" y2="67" stroke="rgba(79,142,255,0.15)" stroke-width="0.5"/>
+                <text x="330" y="87" text-anchor="middle" dominant-baseline="central"
+                      font-family="var(--heading-font)" font-size="16" fill="var(--text)">Assess
+                </text>
+                <text x="330" y="109" text-anchor="middle" dominant-baseline="central"
+                      font-family="var(--body-font)" font-size="12" fill="var(--muted)">LV dysfunction
+                </text>
+
+                <line x1="418" y1="82" x2="456" y2="82"
+                      stroke="rgba(255,255,255,0.12)" stroke-width="0.8" fill="none"/>
+
+                <!-- Task 3 -->
+                <rect x="458" y="34" width="192" height="96" rx="8"
+                      fill="rgba(255,107,107,0.07)" stroke="rgba(255,107,107,0.25)" stroke-width="0.5"/>
+                <text x="554" y="57" text-anchor="middle" dominant-baseline="central"
+                      font-family="var(--mono-font)" font-size="10" fill="var(--accent3)" letter-spacing="0.06em">
+                    Outcome prediction
+                </text>
+                <line x1="484" y1="67" x2="624" y2="67" stroke="rgba(255,107,107,0.15)" stroke-width="0.5"/>
+                <text x="554" y="87" text-anchor="middle" dominant-baseline="central"
+                      font-family="var(--heading-font)" font-size="16" fill="var(--text)">Forecast
+                </text>
+                <text x="554" y="109" text-anchor="middle" dominant-baseline="central"
+                      font-family="var(--body-font)" font-size="12" fill="var(--muted)">Cardiotoxicity risk
+                </text>
+
+                <!-- Span -->
+                <line x1="30" y1="150" x2="650" y2="150"
+                      stroke="var(--muted)" stroke-width="1.2"
+                      marker-start="url(#arc-arr)" marker-end="url(#arc-arr)" fill="none"/>
+                <text x="340" y="170" text-anchor="middle" dominant-baseline="central"
+                      font-family="var(--mono-font)" font-size="10" fill="var(--muted)" letter-spacing="0.2em">
+                    CARDIOTOXICITY SURVEILLANCE
+                </text>
+            </svg>
+        </div>
 
         <div class="tasks-grid">
 
+            <!-- Task 1 -->
             <div class="task-card task-card-1">
                 <div class="task-num">1</div>
                 <div class="task-icon icon-green">📊</div>
-                <div class="task-title">Cardiac Parameter &amp; Biomarker Estimation</div>
+                <div class="task-title">LVEF Estimation</div>
                 <div class="task-desc">
-                    Develop AI models to estimate LV ejection fraction, and cardiotoxicity biomarkers directly from echo
-                    videos.
+                    Left ventricular ejection fraction is the cornerstone parameter for
+                    cardiotoxicity surveillance in cancer patients on cardiotoxic therapies —
+                    and the primary criterion by which cardiac dysfunction is defined in
+                    cardio-oncology guidelines. Yet manual LVEF assessment is operator-dependent
+                    and subject to significant inter-observer variability, limiting reliable
+                    serial monitoring at scale. This task challenges teams to develop automated,
+                    reproducible LVEF estimation directly from echocardiography video, enabling
+                    consistent cardiac surveillance across longitudinal follow-up.
                 </div>
                 <div class="task-metric">
                     <span class="metric-dot" style="background:var(--accent)"></span>
-                    Primary metric: <strong style="color:var(--text)">&nbsp;MAE</strong>
+                    Primary metric: <strong style="color:var(--text)">&nbsp;MAE (LVEF)</strong>
                 </div>
                 <div class="task-metric">
                     <span class="metric-dot" style="background:var(--accent)"></span>
-                    339 patients · 1,564 videos
+                    391 patients · 1,950 videos
                 </div>
                 <div class="task-metric">
                     <span class="metric-dot" style="background:var(--accent)"></span>
-                    Baseline:&nbsp;<a href="https://echonet.github.io/dynamic/" target="_blank"
-                                      style="color:var(--muted); text-decoration:underline; transition:color 0.2s;"
-                                      onmouseover="this.style.color='var(--text)'"
-                                      onmouseout="this.style.color='var(--muted)'">EchoNet-Dynamic</a>
+                    Baseline: EchoNet-Dynamic
                 </div>
                 <div class="task-award">
                     <span class="award-label">Prize pool</span>
@@ -134,13 +227,20 @@
                 </div>
             </div>
 
+            <!-- Task 2 -->
             <div class="task-card task-card-2">
                 <div class="task-num">2</div>
                 <div class="task-icon icon-blue">🫀</div>
-                <div class="task-title">LV Dysfunction Assessment</div>
+                <div class="task-title">LV Dysfunction Classification</div>
                 <div class="task-desc">
-                    Classify left ventricular dysfunction from longitudinal echocardiography using clinically accepted
-                    GLS threshold.
+                    LV dysfunction — characterised by impaired global longitudinal strain
+                    (GLS ≥ −16%, per ASE/EACVI consensus) — is directly linked to early
+                    subclinical cardiotoxicity, emerging weeks to months before overt LVEF
+                    decline becomes detectable. Identifying it promptly is critical: it marks
+                    the window in which cardioprotective intervention is still effective.
+                    This task challenges teams to classify LV dysfunction from longitudinal
+                    echocardiography, translating automated cardiac assessment into a
+                    clinically actionable decision at each follow-up timepoint.
                 </div>
                 <div class="task-metric">
                     <span class="metric-dot" style="background:var(--accent2)"></span>
@@ -148,11 +248,11 @@
                 </div>
                 <div class="task-metric">
                     <span class="metric-dot" style="background:var(--accent2)"></span>
-                    339 patients · all timepoints
+                    391 patients · 1,950 videos
                 </div>
                 <div class="task-metric">
                     <span class="metric-dot" style="background:var(--accent2)"></span>
-                    Baseline: GLS &ge; &minus;16% guideline rule
+                    Baseline: GLS threshold rule
                 </div>
                 <div class="task-award">
                     <span class="award-label">Prize pool</span>
@@ -160,13 +260,19 @@
                 </div>
             </div>
 
+            <!-- Task 3 -->
             <div class="task-card task-card-3">
                 <div class="task-num">3</div>
                 <div class="task-icon icon-red">🔮</div>
                 <div class="task-title">Early Prediction of Cardiotoxicity</div>
                 <div class="task-desc">
-                    Predict future therapy-induced cardiotoxicity from <em>baseline</em> echocardiography alone — before
-                    treatment-related changes occur, enabling proactive and personalized patient management.
+                    Predicting cardiotoxicity from baseline imaging — before therapy begins —
+                    is of paramount clinical importance: it is the only point at which treatment
+                    can be proactively tailored. High-risk patients identified at baseline can
+                    receive cardioprotective co-treatment or modified regimens from the outset,
+                    while low-risk patients avoid unnecessary intervention. This task challenges
+                    teams to predict future cardiotoxicity from pre-treatment echocardiography
+                    alone, enabling truly preventive cardio-oncology care.
                 </div>
                 <div class="task-metric">
                     <span class="metric-dot" style="background:var(--accent3)"></span>
@@ -174,7 +280,7 @@
                 </div>
                 <div class="task-metric">
                     <span class="metric-dot" style="background:var(--accent3)"></span>
-                    228 patients · baseline only
+                    279 patients · baseline only
                 </div>
                 <div class="task-metric">
                     <span class="metric-dot" style="background:var(--accent3)"></span>
@@ -187,73 +293,163 @@
             </div>
 
         </div>
-    </div>
-    </div>
-</section>
 
-<section class="cta-section">
-    <h2 class="cta-title">Ready to participate?</h2>
-    <a href="https://www.synapse.org/Synapse:syn72001386" class="btn-primary"
-       style="margin:0 auto;display:inline-flex;">Register on Synapse →</a>
-</section>
+        <!--<section id="tasks" class="page-header">-->
+        <!--    <div class="container">-->
+        <!--        <p class="section-label">// Challenge Tasks</p>-->
+        <!--        <h2 class="section-title">Three Independent Tasks</h2>-->
+        <!--        <p class="section-desc">Each task addresses a distinct clinical problem. Teams may participate in one, two, or-->
+        <!--            all three — with independent leaderboards and awards per task.</p>-->
+
+        <!--        <div class="tasks-grid">-->
+
+        <!--            <div class="task-card task-card-1">-->
+        <!--                <div class="task-num">1</div>-->
+        <!--                <div class="task-icon icon-green">📊</div>-->
+        <!--                <div class="task-title">Cardiac Parameter &amp; Biomarker Estimation</div>-->
+        <!--                <div class="task-desc">-->
+        <!--                    Develop AI models to estimate LV ejection fraction, and cardiotoxicity biomarkers directly from echo-->
+        <!--                    videos.-->
+        <!--                </div>-->
+        <!--                <div class="task-metric">-->
+        <!--                    <span class="metric-dot" style="background:var(&#45;&#45;accent)"></span>-->
+        <!--                    Primary metric: <strong style="color:var(&#45;&#45;text)">&nbsp;MAE</strong>-->
+        <!--                </div>-->
+        <!--                <div class="task-metric">-->
+        <!--                    <span class="metric-dot" style="background:var(&#45;&#45;accent)"></span>-->
+        <!--                    339 patients · 1,564 videos-->
+        <!--                </div>-->
+        <!--                <div class="task-metric">-->
+        <!--                    <span class="metric-dot" style="background:var(&#45;&#45;accent)"></span>-->
+        <!--                    Baseline:&nbsp;<a href="https://echonet.github.io/dynamic/" target="_blank"-->
+        <!--                                      style="color:var(&#45;&#45;muted); text-decoration:underline; transition:color 0.2s;"-->
+        <!--                                      onmouseover="this.style.color='var(&#45;&#45;text)'"-->
+        <!--                                      onmouseout="this.style.color='var(&#45;&#45;muted)'">EchoNet-Dynamic</a>-->
+        <!--                </div>-->
+        <!--                <div class="task-award">-->
+        <!--                    <span class="award-label">Prize pool</span>-->
+        <!--                    <span class="award-value award-green">€1,200</span>-->
+        <!--                </div>-->
+        <!--            </div>-->
+
+        <!--            <div class="task-card task-card-2">-->
+        <!--                <div class="task-num">2</div>-->
+        <!--                <div class="task-icon icon-blue">🫀</div>-->
+        <!--                <div class="task-title">LV Dysfunction Assessment</div>-->
+        <!--                <div class="task-desc">-->
+        <!--                    Classify left ventricular dysfunction from longitudinal echocardiography using clinically accepted-->
+        <!--                    GLS threshold.-->
+        <!--                </div>-->
+        <!--                <div class="task-metric">-->
+        <!--                    <span class="metric-dot" style="background:var(&#45;&#45;accent2)"></span>-->
+        <!--                    Primary metric: <strong style="color:var(&#45;&#45;text)">&nbsp;AUC-ROC</strong>-->
+        <!--                </div>-->
+        <!--                <div class="task-metric">-->
+        <!--                    <span class="metric-dot" style="background:var(&#45;&#45;accent2)"></span>-->
+        <!--                    339 patients · all timepoints-->
+        <!--                </div>-->
+        <!--                <div class="task-metric">-->
+        <!--                    <span class="metric-dot" style="background:var(&#45;&#45;accent2)"></span>-->
+        <!--                    Baseline: GLS &ge; &minus;16% guideline rule-->
+        <!--                </div>-->
+        <!--                <div class="task-award">-->
+        <!--                    <span class="award-label">Prize pool</span>-->
+        <!--                    <span class="award-value award-blue">€900</span>-->
+        <!--                </div>-->
+        <!--            </div>-->
+
+        <!--            <div class="task-card task-card-3">-->
+        <!--                <div class="task-num">3</div>-->
+        <!--                <div class="task-icon icon-red">🔮</div>-->
+        <!--                <div class="task-title">Early Prediction of Cardiotoxicity</div>-->
+        <!--                <div class="task-desc">-->
+        <!--                    Predict future therapy-induced cardiotoxicity from <em>baseline</em> echocardiography alone — before-->
+        <!--                    treatment-related changes occur, enabling proactive and personalized patient management.-->
+        <!--                </div>-->
+        <!--                <div class="task-metric">-->
+        <!--                    <span class="metric-dot" style="background:var(&#45;&#45;accent3)"></span>-->
+        <!--                    Primary metric: <strong style="color:var(&#45;&#45;text)">&nbsp;AUC-ROC</strong>-->
+        <!--                </div>-->
+        <!--                <div class="task-metric">-->
+        <!--                    <span class="metric-dot" style="background:var(&#45;&#45;accent3)"></span>-->
+        <!--                    228 patients · baseline only-->
+        <!--                </div>-->
+        <!--                <div class="task-metric">-->
+        <!--                    <span class="metric-dot" style="background:var(&#45;&#45;accent3)"></span>-->
+        <!--                    Baseline: HFA-ICOS clinical risk model-->
+        <!--                </div>-->
+        <!--                <div class="task-award">-->
+        <!--                    <span class="award-label">Prize pool</span>-->
+        <!--                    <span class="award-value award-red">€900</span>-->
+        <!--                </div>-->
+        <!--            </div>-->
+
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--    </div>-->
+        <!--</section>-->
+
+        <section class="cta-section">
+            <h2 class="cta-title">Ready to participate?</h2>
+            <a href="https://www.synapse.org/Synapse:syn72001386" class="btn-primary"
+               style="margin:0 auto;display:inline-flex;">Register on Synapse →</a>
+        </section>
 
 
-<div class="partner-logos-container">
-    <div class="partner-logos-row">
-        <div class="logo-wrapper" data-name="CARDIOCARE Project">
-            <a href="https://cardiocare-project.eu/" target="_blank" rel="noopener"><img
-                    src="assets/logos/cardiocare-logo.png" alt="CARDIOCARE" class="partner-logo-img"></a>
-        </div>
-        <div class="logo-wrapper" data-name="Foundation for Research and Technology - Hellas">
-            <a href="https://www.ics.forth.gr/cbml/?lang=en" target="_blank" rel="noopener"><img
-                    src="assets/logos/forth-logo.png" alt="FORTH" class="partner-logo-img"></a>
-        </div>
-        <div class="logo-wrapper" data-name="University of Ioannina">
-            <a href="https://medlab.cc.uoi.gr/" target="_blank" rel="noopener"><img src="assets/logos/uoi-logo.svg"
-                                                                                    alt="UOI" class="partner-logo-img"></a>
-        </div>
-        <div class="logo-wrapper" data-name="Hellenic Mediterranean University">
-            <a href="https://bmi.hmu.gr/" target="_blank" rel="noopener"><img src="assets/logos/hmu-logo.png" alt="HMU"
-                                                                              class="partner-logo-img"></a>
-        </div>
-    </div>
-
-    <div class="partner-logos-row">
-        <div class="logo-wrapper" data-name="National and Kapodistrian University of Athens">
-            <a href="https://en.uoa.gr/" target="_blank" rel="noopener"><img src="assets/logos/nkua-logo.png" alt="NKUA"
-                                                                             class="partner-logo-img"></a>
-        </div>
-        <div class="logo-wrapper" data-name="Bank of Cyprus Oncology Centre">
-            <a href="https://www.bococ.org.cy/en" target="_blank" rel="noopener"><img src="assets/logos/bococ-logo.png"
-                                                                                      alt="BOCOC"
+        <div class="partner-logos-container">
+            <div class="partner-logos-row">
+                <div class="logo-wrapper" data-name="CARDIOCARE Project">
+                    <a href="https://cardiocare-project.eu/" target="_blank" rel="noopener"><img
+                            src="assets/logos/cardiocare-logo.png" alt="CARDIOCARE" class="partner-logo-img"></a>
+                </div>
+                <div class="logo-wrapper" data-name="Foundation for Research and Technology - Hellas">
+                    <a href="https://www.ics.forth.gr/cbml/?lang=en" target="_blank" rel="noopener"><img
+                            src="assets/logos/forth-logo.png" alt="FORTH" class="partner-logo-img"></a>
+                </div>
+                <div class="logo-wrapper" data-name="University of Ioannina">
+                    <a href="https://medlab.cc.uoi.gr/" target="_blank" rel="noopener"><img
+                            src="assets/logos/uoi-logo.svg"
+                            alt="UOI" class="partner-logo-img"></a>
+                </div>
+                <div class="logo-wrapper" data-name="Hellenic Mediterranean University">
+                    <a href="https://bmi.hmu.gr/" target="_blank" rel="noopener"><img src="assets/logos/hmu-logo.png"
+                                                                                      alt="HMU"
                                                                                       class="partner-logo-img"></a>
-        </div>
-        <div class="logo-wrapper" data-name="Karolinska University Hospital">
-            <a href="https://www.karolinskahospital.com/" target="_blank" rel="noopener"><img
-                    src="assets/logos/karolinska-logo.png" alt="Karolinska" class="partner-logo-img"></a>
-        </div>
-        <div class="logo-wrapper" data-name="European Institute of Oncology">
-            <a href="https://www.ieo.it/en/" target="_blank" rel="noopener"><img src="assets/logos/ieo-logo.png"
-                                                                                 alt="IEO" class="partner-logo-img"></a>
-        </div>
-        <div class="logo-wrapper" data-name="Institute of Oncology Ljubljana">
-            <a href="https://www.onko-i.si/en/" target="_blank" rel="noopener"><img src="assets/logos/iol-logo.svg"
-                                                                                    alt="IOL" class="partner-logo-img"></a>
-        </div>
-    </div>
-</div>
+                </div>
+            </div>
 
-<footer>
-    <div class="footer-bottom"
-         style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 24px;">
-        <p>© 2026 EchoRisk-MICCAI. All rights reserved.</p>
+            <div class="partner-logos-row">
+                <div class="logo-wrapper" data-name="National and Kapodistrian University of Athens">
+                    <a href="https://en.uoa.gr/" target="_blank" rel="noopener"><img src="assets/logos/nkua-logo.png"
+                                                                                     alt="NKUA"
+                                                                                     class="partner-logo-img"></a>
+                </div>
+                <div class="logo-wrapper" data-name="Bank of Cyprus Oncology Centre">
+                    <a href="https://www.bococ.org.cy/en" target="_blank" rel="noopener"><img
+                            src="assets/logos/bococ-logo.png"
+                            alt="BOCOC"
+                            class="partner-logo-img"></a>
+                </div>
+                <div class="logo-wrapper" data-name="European Institute of Oncology">
+                    <a href="https://www.ieo.it/en/" target="_blank" rel="noopener"><img src="assets/logos/ieo-logo.png"
+                                                                                         alt="IEO"
+                                                                                         class="partner-logo-img"></a>
+                </div>
+            </div>
+        </div>
 
-        <p style="max-width: 650px; text-align: right; font-size: 11px; line-height: 1.5; color: var(--muted); font-family: var(--body-font);">
-            The <strong>CARDIOCARE</strong> project has received funding from the European Union's Horizon 2020 research
-            and innovation programme under grant agreement No&nbsp;945175.
-        </p>
-    </div>
-</footer>
+        <footer>
+            <div class="footer-bottom"
+                 style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 24px;">
+                <p>© 2026 EchoRisk-MICCAI. All rights reserved.</p>
+
+                <p style="max-width: 650px; text-align: right; font-size: 11px; line-height: 1.5; color: var(--muted); font-family: var(--body-font);">
+                    The <strong>CARDIOCARE</strong> project has received funding from the European Union's Horizon 2020
+                    research
+                    and innovation programme under grant agreement No&nbsp;945175.
+                </p>
+            </div>
+        </footer>
 
 </body>
 </html>

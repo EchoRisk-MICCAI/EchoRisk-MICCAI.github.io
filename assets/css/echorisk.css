@@ -474,15 +474,19 @@ section {
 }
 
 .highlight-box {
-    background: rgba(0, 201, 167, 0.06);
-    border: 1px solid rgba(0, 201, 167, 0.2);
-    border-left: 3px solid var(--accent);
-    padding: 20px 24px;
-    border-radius: 0 8px 8px 0;
-    margin: 24px 0;
-    font-size: 15px;
-    color: var(--text);
-    line-height: 1.6;
+  border-left: 2px solid rgba(255,255,255,0.15);
+  padding: 2px 0 2px 24px;
+  margin: 24px 0;
+  font-size: 15px;
+  font-style: italic;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.highlight-box strong {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--text);
 }
 
 .about-visual {
@@ -550,6 +554,7 @@ section {
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     margin-top: 64px;
+    align-items: stretch;
 }
 
 .task-card {
@@ -561,6 +566,8 @@ section {
     overflow: hidden;
     transition: transform 0.25s, border-color 0.25s;
     cursor: default;
+    display: flex;
+    flex-direction: column;
 }
 
 .task-card:hover {
@@ -641,10 +648,10 @@ section {
 }
 
 .task-desc {
-    font-size: 14px;
-    color: var(--muted);
-    line-height: 1.7;
-    margin-bottom: 24px;
+    flex: 1;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
 }
 
 .task-metric {
@@ -1122,6 +1129,15 @@ footer {
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
+
+    .org-grid,
+    .org-grid--2,
+    .org-grid--3,
+    .org-grid--4,
+    .org-grid--5 {
+        grid-template-columns: 1fr 1fr;
+        max-width: 100%;
+    }
 }
 
 /* ── PARTNER LOGOS STRIP ── */
@@ -1265,4 +1281,99 @@ nav img {
     .nav-links li {
         margin-left: 0 !important;
     }
+}
+
+.committee-heading {
+  font-family: var(--heading-font);
+  font-size: 22px;
+  color: var(--text);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding-bottom: 12px;
+  margin: 56px 0 24px;
+}
+
+.org-grid--2 { grid-template-columns: repeat(2, 1fr); margin-top: 0; max-width: 560px; }
+.org-grid--3 { grid-template-columns: repeat(3, 1fr); margin-top: 0; }
+.org-grid--4 { grid-template-columns: repeat(4, 1fr); margin-top: 0; }
+.org-grid--5 { grid-template-columns: repeat(5, 1fr); margin-top: 0; }
+
+.org-hover-teal:hover   { border-color: rgba(0,201,167,0.35);   box-shadow: 0 8px 20px rgba(0,201,167,0.07); }
+.org-hover-blue:hover   { border-color: rgba(79,142,255,0.35);  box-shadow: 0 8px 20px rgba(79,142,255,0.07); }
+.org-hover-pink:hover   { border-color: rgba(244,114,182,0.35); box-shadow: 0 8px 20px rgba(244,114,182,0.07); }
+.org-hover-coral:hover  { border-color: rgba(255,107,107,0.35); box-shadow: 0 8px 20px rgba(255,107,107,0.07); }
+.org-hover-purple:hover { border-color: rgba(129,140,248,0.35); box-shadow: 0 8px 20px rgba(129,140,248,0.07); }
+.org-hover-green:hover  { border-color: rgba(52,211,153,0.35);  box-shadow: 0 8px 20px rgba(52,211,153,0.07); }
+
+
+.clinical-arc {
+  margin: 40px 0 0;
+  padding: 20px 0 8px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+
+#dua p,
+#dua li,
+#dua blockquote {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+/* ── FAQ ── */
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 48px;
+}
+
+.faq-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    transition: border-color 0.2s;
+}
+
+.faq-card:hover {
+    border-color: rgba(255,255,255,0.15);
+}
+
+.faq-question {
+    font-family: var(--heading-font);
+    font-size: 16px;
+    color: var(--text);
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.faq-answer {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.75;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+.faq-answer strong {
+    color: var(--text);
+}
+
+.faq-answer em {
+    color: var(--text);
+}
+
+@media (max-width: 900px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.faq-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 8px);
 }
