@@ -37,6 +37,13 @@
 
     </div>
 
+    <label for="nav-toggle" class="nav-hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <input type="checkbox" id="nav-toggle" style="display:none;">
+
     <ul class="nav-links">
         <li><a href="index.html" class="active">About</a></li>
         <li><a href="tasks.html">Tasks</a></li>
@@ -58,18 +65,25 @@
     </ul>
 </nav>
 
+<div class="affiliation-bar">
+    <span style="width:6px; height:6px; background:var(--accent2); border-radius:50%; display:inline-block; flex-shrink:0;"></span>
+    MICCAI 2026 CARDIAC IMAGING THEME &nbsp;·&nbsp; JOINTLY WITH THE
+    <a href="https://stacom.github.io/stacom2026/" target="_blank" rel="noopener noreferrer"
+       style="color:var(--accent2); text-decoration:none; font-weight:600;">STACOM WORKSHOP</a>
+</div>
+
 <section class="hero">
-    <div class="hero-badge"
-         style="border: 1px solid var(--accent2); background: rgba(79, 142, 255, 0.15); color: #fff; font-size: 15px; padding: 10px 24px; letter-spacing: 0.5px; box-shadow: 0 0 20px rgba(79, 142, 255, 0.25); transition: all 0.3s ease; margin-bottom: 30px;"
-         onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 24px rgba(79, 142, 255, 0.4)';"
-         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0 20px rgba(79, 142, 255, 0.25)';">
-        <span class="badge-dot" style="background: var(--accent2); width: 10px; height: 10px;"></span>
-        MICCAI 2026 Cardiac Imaging Theme Jointly with the <a href="https://stacom.github.io/stacom2026/"
-                                                              target="_blank"
-                                                              rel="noopener noreferrer"
-                                                              style="color: var(--accent2); text-decoration: none; font-weight: 600;">STACOM
-        Workshop</a>
-    </div>
+<!--    <div class="hero-badge"-->
+<!--         style="border: 1px solid var(&#45;&#45;accent2); background: rgba(79, 142, 255, 0.15); color: #fff; font-size: 15px; padding: 10px 24px; letter-spacing: 0.5px; box-shadow: 0 0 20px rgba(79, 142, 255, 0.25); transition: all 0.3s ease; margin-bottom: 30px;"-->
+<!--         onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 24px rgba(79, 142, 255, 0.4)';"-->
+<!--         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0 20px rgba(79, 142, 255, 0.25)';">-->
+<!--        <span class="badge-dot" style="background: var(&#45;&#45;accent2); width: 10px; height: 10px;"></span>-->
+<!--        MICCAI 2026 Cardiac Imaging Theme Jointly with the <a href="https://stacom.github.io/stacom2026/"-->
+<!--                                                              target="_blank"-->
+<!--                                                              rel="noopener noreferrer"-->
+<!--                                                              style="color: var(&#45;&#45;accent2); text-decoration: none; font-weight: 600;">STACOM-->
+<!--        Workshop</a>-->
+<!--    </div>-->
 
     <h1 style="font-style:normal; margin-top:0;">
         <span style="color:var(--text);">Echo</span><span style="color:var(--accent);">Risk</span><span
@@ -205,7 +219,7 @@
 
 
         <h3 class="committee-heading">Organising Committee</h3>
-        <div class="org-grid org-grid--6">
+        <div class="org-grid org-grid--7">
             <div class="org-card org-hover-teal">
                 <div class="org-avatar">KM</div>
                 <div class="org-role">Challenge Chair</div>
@@ -245,6 +259,12 @@
                 <div class="org-role">Scientific Advisor</div>
                 <div class="org-name">Manolis Tsiknakis</div>
                 <div class="org-inst">Hellenic Mediterranean University</div>
+            </div>
+            <div class="org-card org-hover-blue">
+                <div class="org-avatar" style="background:linear-gradient(135deg,#60a5fa,#818cf8);">MY</div>
+                <div class="org-role">Scientific Advisor</div>
+                <div class="org-name">Mohammad Yaqub</div>
+                <div class="org-inst">Mohamed bin Zayed University of Artificial Intelligence</div>
             </div>
         </div>
 
