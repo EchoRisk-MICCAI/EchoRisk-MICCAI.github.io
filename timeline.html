@@ -21,13 +21,13 @@
 
         <a href="index.html" class="nav-logo"
            style="text-decoration: none; display: flex; align-items: center; position: relative; top: 18px;">
-            <img src="assets/logo.png" alt="EchoRisk Logo"
+            <img src="assets/logos/echorisk_logo.png" alt="EchoRisk Logo"
                  style="width: 105px; height: 105px; object-fit: contain; display: block;">
         </a>
 
         <a href="https://conferences.miccai.org/2026/en/default.asp" target="_blank" rel="noopener noreferrer"
            style="display: flex; align-items: center; border-left: 1px solid var(--border); padding-left: 24px;">
-            <img src="assets/miccai2026-logo.png" alt="MICCAI 2026"
+            <img src="assets/logos/miccai2026-logo.png" alt="MICCAI 2026"
                  style="height: 110px; width: auto; object-fit: contain; display: block; transition: transform 0.2s ease;"
                  onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
         </a>
@@ -68,12 +68,19 @@
                 <div class="timeline-item">
                     <div class="tl-date">April 10, 2026</div>
                     <div class="tl-title">Registration Opens</div>
-                    <div class="tl-desc">Participant registration on Synapse begins · challenge website live</div>
+                    <div class="tl-desc">Challenge website live</div>
                 </div>
                 <div class="timeline-item">
-                    <div class="tl-date">April 15, 2026</div>
+                    <div class="tl-date">April 17, 2026</div>
                     <div class="tl-title">Training &amp; Validation Data Released</div>
                     <div class="tl-desc">Labelled training and validation sets available to registered participants
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="tl-date">April 24, 2026</div>
+                    <div class="tl-title">Official Scoring Code Released</div>
+                    <div class="tl-desc">Evaluation code published on GitHub · participants can self-score validation
+                        predictions locally using the official metric implementations
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -168,12 +175,17 @@
 
 <footer>
     <div class="footer-bottom"
-         style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 24px;">
-        <p>© 2026 EchoRisk-MICCAI. All rights reserved.</p>
-
-        <p style="max-width: 650px; text-align: right; font-size: 11px; line-height: 1.5; color: var(--muted); font-family: var(--body-font);">
-            The <strong>CARDIOCARE</strong> project has received funding from the European Union's Horizon 2020 research
-            and innovation programme under grant agreement No&nbsp;945175.
+         style="display:flex; flex-direction:column; align-items:center; gap:12px; text-align:center;">
+        <div style="display:flex; justify-content:space-between; align-items:center; width:100%; flex-wrap:wrap; gap:12px;">
+            <p>© 2026 EchoRisk-MICCAI. All rights reserved.</p>
+            <a href="mailto:echorisk.miccai@gmail.com"
+               style="font-family:var(--mono-font); font-size:11px; color:var(--muted); text-decoration:none; letter-spacing:0.06em; transition:color 0.2s;"
+               onmouseover="this.style.color='var(--accent2)'"
+               onmouseout="this.style.color='var(--muted)'">echorisk.miccai@gmail.com</a>
+        </div>
+        <p style="font-size:11px; line-height:1.5; color:var(--muted); font-family:var(--body-font);">
+            The <strong>CARDIOCARE</strong> project has received funding from the European Union's Horizon 2020
+            research and innovation programme under grant agreement No&nbsp;945175.
         </p>
     </div>
 </footer>

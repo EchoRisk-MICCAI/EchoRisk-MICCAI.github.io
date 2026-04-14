@@ -12,157 +12,7 @@
           rel="stylesheet">
     <link rel="stylesheet" href="assets/css/echorisk.css">
 
-    <style>
-        /* Specific styles for the rules list and FAQ layout */
-        .rules-list {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-            margin-top: 40px;
-        }
 
-        /* -- RULE CARDS -- */
-        .rule-item {
-            display: flex;
-            gap: 20px;
-            background: var(--card);
-            padding: 24px;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            /* Smooth transition for the hover state */
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        /* Rule Card Hover Effect */
-        .rule-item:hover {
-            transform: translateY(-5px);
-            border-color: rgba(0, 201, 167, 0.4); /* Subtle teal glow */
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4); /* Deep shadow */
-        }
-
-        .rule-number {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-width: 40px;
-            height: 40px;
-            background: rgba(0, 201, 167, 0.1);
-            color: var(--accent);
-            font-family: var(--mono-font);
-            font-size: 18px;
-            font-weight: 600;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-
-        /* Make the number pop when the card is hovered */
-        .rule-item:hover .rule-number {
-            background: var(--accent);
-            color: #04080f; /* Dark text inside the teal circle */
-            transform: scale(1.1);
-        }
-
-        .rule-text {
-            font-size: 15.5px;
-            line-height: 1.6;
-            color: var(--text);
-        }
-
-        .rule-text strong {
-            color: #fff;
-        }
-
-        /* -- FAQ CARDS -- */
-        .faq-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin-top: 40px;
-            align-items: start; /* Stops short cards from stretching */
-        }
-
-        .faq-card {
-            background: var(--card);
-            padding: 24px;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            /* Smooth transition for the hover state */
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        /* FAQ Card Hover Effect */
-        .faq-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(79, 142, 255, 0.4); /* Subtle blue glow */
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-        }
-
-        .faq-question {
-            font-family: var(--heading-font);
-            font-size: 20px;
-            color: #fff;
-            margin-bottom: 12px;
-            transition: color 0.3s ease;
-        }
-
-        /* Make the question text turn blue on hover */
-        .faq-card:hover .faq-question {
-            color: var(--accent2);
-        }
-
-        .faq-answer {
-            font-size: 15px;
-            line-height: 1.6;
-            color: var(--muted);
-        }
-
-        /* Mobile responsiveness */
-        @media (max-width: 768px) {
-            .faq-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .rule-item {
-                flex-direction: column;
-                gap: 12px;
-            }
-        }
-
-
-        /* --- Responsive Navigation Fixes --- */
-
-        /* 1. Prevent awkward text wrapping on logos and buttons */
-        .logo-text, .nav-cta {
-            white-space: nowrap;
-        }
-
-        /* Prevent the MICCAI image from shrinking disproportionately */
-        nav img {
-            flex-shrink: 0;
-        }
-
-        /* 2. When the screen gets smaller than 1050px, stack the nav elegantly */
-        @media (max-width: 1050px) {
-            nav {
-                flex-direction: column !important;
-                height: auto !important;
-                padding: 20px !important;
-                gap: 20px;
-            }
-
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 15px;
-                width: 100%;
-            }
-
-            /* Remove the hard margin on the github icon separator so it centers nicely */
-            .nav-links li {
-                margin-left: 0 !important;
-            }
-        }
-    </style>
 </head>
 <body>
 
@@ -173,13 +23,13 @@
 
         <a href="index.html" class="nav-logo"
            style="text-decoration: none; display: flex; align-items: center; position: relative; top: 18px;">
-            <img src="assets/logo.png" alt="EchoRisk Logo"
+            <img src="assets/logos/echorisk_logo.png" alt="EchoRisk Logo"
                  style="width: 105px; height: 105px; object-fit: contain; display: block;">
         </a>
 
         <a href="https://conferences.miccai.org/2026/en/default.asp" target="_blank" rel="noopener noreferrer"
            style="display: flex; align-items: center; border-left: 1px solid var(--border); padding-left: 24px;">
-            <img src="assets/miccai2026-logo.png" alt="MICCAI 2026"
+            <img src="assets/logos/miccai2026-logo.png" alt="MICCAI 2026"
                  style="height: 110px; width: auto; object-fit: contain; display: block; transition: transform 0.2s ease;"
                  onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
         </a>
@@ -205,7 +55,18 @@
             </a>
         </li>
     </ul>
+    <label for="nav-toggle" class="nav-hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+    </label>
+    <input type="checkbox" id="nav-toggle" style="display:none;">
 </nav>
+
+<div class="affiliation-bar">
+    <span style="width:8px; height:8px; background:var(--accent2); border-radius:50%; display:inline-block; flex-shrink:0;"></span>
+    MICCAI 2026 CARDIAC IMAGING THEME &nbsp;·&nbsp; JOINTLY WITH THE
+    <a href="https://stacom.github.io/stacom2026/" target="_blank" rel="noopener noreferrer"
+       style="color:var(--accent2); text-decoration:none; font-weight:600;">STACOM WORKSHOP</a>
+</div>
 
 <section class="page-header" style="padding-bottom: 40px;">
     <div class="container" style="max-width: 900px;">
@@ -349,8 +210,27 @@
                 </div>
             </div>
 
+            <div class="faq-card">
+                <div class="faq-question">Who should I contact with questions?</div>
+                <div class="faq-answer">For any questions regarding registration, data access, or
+                    submission, contact the organising team at
+                    <a href="mailto:echorisk.miccai@gmail.com" style="color:var(--accent2); text-decoration:none;">echorisk.miccai@gmail.com</a>.
+                    We aim to respond within 3 working days.
+                </div>
+            </div>
+
         </div>
     </div>
+</section>
+
+<section class="cta-section">
+    <h2 class="cta-title">Ready to participate?</h2>
+    <a href="https://www.synapse.org/Synapse:syn72001386" class="btn-primary"
+       style="margin:0 auto; display:inline-flex;">Register on Synapse →</a>
+    <p style="font-family:var(--mono-font); font-size:12px; color:var(--muted); margin-top:16px; letter-spacing:0.06em;">
+        Questions? <a href="mailto:echorisk.miccai@gmail.com"
+                      style="color:var(--accent2); text-decoration:none; border-bottom:1px solid rgba(79,142,255,0.3);">echorisk.miccai@gmail.com</a>
+    </p>
 </section>
 
 <div class="partner-logos-container">
@@ -392,11 +272,16 @@
 
 <footer>
     <div class="footer-bottom"
-         style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 24px;">
-        <p>© 2026 EchoRisk-MICCAI. All rights reserved.</p>
-        <p style="max-width: 650px; text-align: right; font-size: 11px; line-height: 1.5; color: var(--muted); font-family: var(--body-font);">
-            The <strong>CARDIOCARE</strong> project has received funding from the European Union's Horizon 2020 research
-            and innovation programme under grant agreement No&nbsp;945175.
+         style="display:flex; flex-direction:column; align-items:center; gap:12px; text-align:center;">
+        <div style="display:flex; justify-content:space-between; align-items:center; width:100%; flex-wrap:wrap; gap:12px;">
+            <p>© 2026 EchoRisk-MICCAI. All rights reserved.</p>
+            <a href="mailto:echorisk.miccai@gmail.com"
+               style="font-family:var(--mono-font); font-size:11px; color:var(--muted); text-decoration:none; letter-spacing:0.06em; transition:color 0.2s;"
+               onmouseover="this.style.color='var(--accent2)'" onmouseout="this.style.color='var(--muted)'">echorisk.miccai@gmail.com</a>
+        </div>
+        <p style="font-size:11px; line-height:1.5; color:var(--muted); font-family:var(--body-font);">
+            The <strong>CARDIOCARE</strong> project has received funding from the European Union's Horizon 2020
+            research and innovation programme under grant agreement No&nbsp;945175.
         </p>
     </div>
 </footer>

@@ -18,12 +18,12 @@
     <div style="display:flex; align-items:center; gap:24px;">
         <a href="index.html" class="nav-logo"
            style="text-decoration:none; display:flex; align-items:center; position:relative; top:18px;">
-            <img src="assets/logo.png" alt="EchoRisk Logo"
+            <img src="assets/logos/echorisk_logo.png" alt="EchoRisk Logo"
                  style="width:105px; height:105px; object-fit:contain; display:block;">
         </a>
         <a href="https://conferences.miccai.org/2026/en/default.asp" target="_blank" rel="noopener noreferrer"
            style="display:flex; align-items:center; border-left:1px solid var(--border); padding-left:24px;">
-            <img src="assets/miccai2026-logo.png" alt="MICCAI 2026"
+            <img src="assets/logos/miccai2026-logo.png" alt="MICCAI 2026"
                  style="height:110px; width:auto; object-fit:contain; display:block; transition:transform 0.2s ease;"
                  onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
         </a>
@@ -223,7 +223,7 @@
                     </div>
                     <div class="eval-row">
                         <div class="eval-label">Clinical Target:</div>
-                        <div class="eval-value">Detecting clinically relevant GLS deterioration &gt;15%</div>
+                        <div class="eval-value">Detecting clinically relevant GLS deterioration &gt;16%</div>
                     </div>
                     <div class="eval-row">
                         <div class="eval-label">Secondary:</div>
@@ -310,9 +310,14 @@
 </section><!-- end tasks -->
 
 <section class="cta-section">
+    <p class="section-label" style="text-align:center;">// Get Started</p>
     <h2 class="cta-title">Ready to participate?</h2>
     <a href="https://www.synapse.org/Synapse:syn72001386" class="btn-primary"
-       style="margin:0 auto; display:inline-flex;">Register on Synapse →</a>
+       style="margin:0 auto;display:inline-flex;">Register on Synapse →</a>
+    <p style="font-family:var(--mono-font); font-size:12px; color:var(--muted); margin-top:16px; letter-spacing:0.06em;">
+        Questions? <a href="mailto:echorisk.miccai@gmail.com"
+        style="color:var(--accent2); text-decoration:none; border-bottom:1px solid rgba(79,142,255,0.3);">echorisk.miccai@gmail.com</a>
+    </p>
 </section>
 
 <div class="partner-logos-container">
@@ -353,9 +358,15 @@
 
 <footer>
     <div class="footer-bottom"
-         style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:24px;">
-        <p>© 2026 EchoRisk-MICCAI. All rights reserved.</p>
-        <p style="max-width:650px; text-align:right; font-size:11px; line-height:1.5; color:var(--muted); font-family:var(--body-font);">
+         style="display:flex; flex-direction:column; align-items:center; gap:12px; text-align:center;">
+        <div style="display:flex; justify-content:space-between; align-items:center; width:100%; flex-wrap:wrap; gap:12px;">
+            <p>© 2026 EchoRisk-MICCAI. All rights reserved.</p>
+            <a href="mailto:echorisk.miccai@gmail.com"
+               style="font-family:var(--mono-font); font-size:11px; color:var(--muted); text-decoration:none; letter-spacing:0.06em; transition:color 0.2s;"
+               onmouseover="this.style.color='var(--accent2)'"
+               onmouseout="this.style.color='var(--muted)'">echorisk.miccai@gmail.com</a>
+        </div>
+        <p style="font-size:11px; line-height:1.5; color:var(--muted); font-family:var(--body-font);">
             The <strong>CARDIOCARE</strong> project has received funding from the European Union's Horizon 2020
             research and innovation programme under grant agreement No&nbsp;945175.
         </p>
