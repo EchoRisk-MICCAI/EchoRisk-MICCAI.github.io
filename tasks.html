@@ -171,7 +171,7 @@
                     </div>
                     <div class="eval-row">
                         <div class="eval-label">Secondary:</div>
-                        <div class="eval-value">RMSE, R², and clinically actionable error margins</div>
+                        <div class="eval-value">RMSE, Pearson r, and clinically actionable error margins</div>
                     </div>
                     <div style="height:1px; background:rgba(255,255,255,0.1); margin:12px 0;"></div>
                     <div class="eval-row">
@@ -185,6 +185,10 @@
                     <div class="eval-row">
                         <div class="eval-label">Reference Baseline:</div>
                         <div class="eval-value">EchoNet-Dynamic</div>
+                    </div>
+                    <div class="task-metric">
+                        <span class="metric-dot" style="background:var(--accent)"></span>
+                        Output: <strong style="color:var(--text)">&nbsp;LVEF % in [0, 100] per exam</strong>
                     </div>
                 </div>
                 <div class="task-award">
@@ -227,7 +231,7 @@
                     </div>
                     <div class="eval-row">
                         <div class="eval-label">Secondary:</div>
-                        <div class="eval-value">Highest Sens. @ 90% Spec., F1-Score, Overall Accuracy</div>
+                        <div class="eval-value">Balanced Accuracy (tie-breaker), Sens. @ 90% Spec., AUPRC, F1</div>
                     </div>
                     <div style="height:1px; background:rgba(255,255,255,0.1); margin:12px 0;"></div>
                     <div class="eval-row">
@@ -241,6 +245,10 @@
                     <div class="eval-row">
                         <div class="eval-label">Reference Baseline:</div>
                         <div class="eval-value">Standard Video CNN</div>
+                    </div>
+                    <div class="task-metric">
+                        <span class="metric-dot" style="background:var(--accent2)"></span>
+                        Output: <strong style="color:var(--text)">&nbsp;Probability in [0, 1] per exam</strong>
                     </div>
                 </div>
                 <div class="task-award">
@@ -283,7 +291,7 @@
                     </div>
                     <div class="eval-row">
                         <div class="eval-label">Secondary:</div>
-                        <div class="eval-value">Higher Sens. @ 20% FPR, Brier Score, Balanced Accuracy</div>
+                        <div class="eval-value">Sens. @ 10% FPR, Sens. @ 20% FPR, Brier Score, Balanced Accuracy</div>
                     </div>
                     <div style="height:1px; background:rgba(255,255,255,0.1); margin:12px 0;"></div>
                     <div class="eval-row">
@@ -297,6 +305,10 @@
                     <div class="eval-row">
                         <div class="eval-label">Reference Baseline:</div>
                         <div class="eval-value">HFA-ICOS clinical risk model</div>
+                    </div>
+                    <div class="task-metric">
+                        <span class="metric-dot" style="background:var(--accent3)"></span>
+                        Output: <strong style="color:var(--text)">&nbsp;Probability in [0, 1] per exam</strong>
                     </div>
                 </div>
                 <div class="task-award">
