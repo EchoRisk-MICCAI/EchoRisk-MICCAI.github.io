@@ -1668,3 +1668,8 @@ footer {
         height: 70px;
     }
 }
+
+
+.org-grid--8 {
+  grid-template-columns: repeat(8, 1fr);
+}
