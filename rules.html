@@ -175,9 +175,14 @@
 
             <div class="faq-card">
                 <div class="faq-question">Can I use external data or pretrained models?</div>
-                <div class="faq-answer">Yes, you are allowed to use publicly available external datasets and pretrained
-                    weights (like EchoNet or ImageNet). However, you must explicitly disclose all external resources
-                    used in your methodology paper.
+                <div class="faq-answer">
+                    Yes. You may use publicly available external datasets and
+                    pretrained weights (e.g. EchoNet, EchoPrime, ImageNet). Fine-tuning a public checkpoint on
+                    the challenge training data is also permitted. However, fine-tuning on a private or
+                    institutional dataset is <strong>not permitted</strong> — all external
+                    resources must be publicly available so that any team could in principle reproduce your
+                    pipeline. All external data and weights used must be explicitly disclosed in your methodology
+                    paper, including any additional fine-tuning performed and on what data.
                 </div>
             </div>
 
