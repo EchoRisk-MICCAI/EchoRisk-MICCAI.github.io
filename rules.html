@@ -269,6 +269,24 @@
                 </div>
             </div>
 
+            <div class="faq-card">
+                <div class="faq-question">Are frame rate and pixel spacing metadata available in the DICOM files?</div>
+                <div class="faq-answer">
+                    No. Temporal calibration tags (<code>FrameTime</code>, <code>CineRate</code>) and spatial
+                    calibration
+                    tags (<code>SequenceOfUltrasoundRegions</code>, <code>PixelSpacing</code>) are absent from all
+                    released
+                    DICOM files. This is a known characteristic of the dataset resulting from the anonymisation pipeline
+                    applied prior to data transfer and affects all tasks, splits, and sites consistently.
+                    <br><br>
+                    <code>NumberOfFrames</code> is present in every file and can be read directly from the DICOM header.
+                    Participants should develop methods that do not assume physical temporal or spatial calibration is
+                    available at inference. This is consistent with established echo AI benchmarks including
+                    EchoNet-Dynamic, and reflects realistic deployment conditions in heterogeneous clinical
+                    environments.
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
