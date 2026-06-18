@@ -287,6 +287,21 @@
                 </div>
             </div>
 
+            <div class="faq-card">
+                <div class="faq-question">Can the A2C or A4C view be missing at test time?</div>
+                <div class="faq-answer">
+                    Yes. The dataset documentation notes that either the A2C or A4C DICOM may be absent
+                    for some visits. This reflects real clinical acquisition variability and applies across
+                    all splits.
+                    <br><br>
+                    Participants should treat the validation set as representative of test-set conditions
+                    with respect to view availability. Your pipeline must handle missing views gracefully.
+                    We recommend characterising missingness in the validation set locally to inform your
+                    design decisions. Per-split missingness statistics will not be released prior to
+                    test-set evaluation.
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
