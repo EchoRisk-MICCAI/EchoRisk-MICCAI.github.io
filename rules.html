@@ -165,7 +165,7 @@
 
         <div class="faq-grid">
 
-            <!-- Row 1: both short -->
+            <!-- Row 1 -->
             <div class="faq-card">
                 <div class="faq-question">Do I have to participate in all tasks?</div>
                 <div class="faq-answer">No. You may choose to participate in Task 1, Task 2, Task 3, or any combination
@@ -186,7 +186,7 @@
                 </div>
             </div>
 
-            <!-- Row 2: both medium-long -->
+            <!-- Row 2 -->
             <div class="faq-card">
                 <div class="faq-question">Is a paper submission required to access the test set?</div>
                 <div class="faq-answer">
@@ -194,9 +194,12 @@
                     2026</strong> is a prerequisite for test-set evaluation and leaderboard inclusion. This is a
                     firm requirement, consistent with major MICCAI challenges such as HECKTOR and BraTS.
                     <br><br>
-                    Papers submitted by 1 July should describe the method and validation-set results. The
-                    camera-ready version, due <strong>27 August 2026</strong>, may be updated to include final
-                    test-set results after Docker evaluation closes on 20 August.
+                    The paper submitted by 1 July should describe your approach and validation-set results as they
+                    stand at that point. The camera-ready version, due <strong>27 August 2026</strong>, may
+                    incorporate minor refinements and additional validation-set results. The core method must
+                    remain substantially the same as the reviewed version. Whether final test-set results can be
+                    included in the camera-ready will depend on evaluation timeline and will be communicated to
+                    all teams after the Docker deadline closes.
                 </div>
             </div>
 
@@ -218,7 +221,7 @@
                 </div>
             </div>
 
-            <!-- Row 3: both short-medium -->
+            <!-- Row 3 -->
             <div class="faq-card">
                 <div class="faq-question">Is there an online leaderboard during development?</div>
                 <div class="faq-answer">No. Training and validation sets are released with ground-truth labels,
@@ -235,7 +238,7 @@
                 </div>
             </div>
 
-            <!-- Row 4: both short -->
+            <!-- Row 4 -->
             <div class="faq-card">
                 <div class="faq-question">Are organizers allowed to participate?</div>
                 <div class="faq-answer">Members of the organizer institutes are welcome to submit models and participate
@@ -253,7 +256,7 @@
                 </div>
             </div>
 
-            <!-- Row 5: both short -->
+            <!-- Row 5 -->
             <div class="faq-card">
                 <div class="faq-question">What is the maximum number of team members allowed?</div>
                 <div class="faq-answer">Each participating team can consist of up to a maximum of <strong>6
@@ -269,21 +272,21 @@
                 </div>
             </div>
 
+            <!-- Row 6 -->
             <div class="faq-card">
                 <div class="faq-question">Are frame rate and pixel spacing metadata available in the DICOM files?</div>
                 <div class="faq-answer">
                     No. Temporal calibration tags (<code>FrameTime</code>, <code>CineRate</code>) and spatial
-                    calibration
-                    tags (<code>SequenceOfUltrasoundRegions</code>, <code>PixelSpacing</code>) are absent from all
-                    released
-                    DICOM files. This is a known characteristic of the dataset resulting from the anonymisation pipeline
-                    applied prior to data transfer and affects all tasks, splits, and sites consistently.
+                    calibration tags (<code>SequenceOfUltrasoundRegions</code>, <code>PixelSpacing</code>) are
+                    absent from all released DICOM files. This is a known characteristic of the dataset resulting
+                    from the anonymisation pipeline applied prior to data transfer and affects all tasks, splits,
+                    and sites consistently.
                     <br><br>
-                    <code>NumberOfFrames</code> is present in every file and can be read directly from the DICOM header.
-                    Participants should develop methods that do not assume physical temporal or spatial calibration is
-                    available at inference. This is consistent with established echo AI benchmarks including
-                    EchoNet-Dynamic, and reflects realistic deployment conditions in heterogeneous clinical
-                    environments.
+                    <code>NumberOfFrames</code> is present in every file and can be read directly from the DICOM
+                    header. Participants should develop methods that do not assume physical temporal or spatial
+                    calibration is available at inference. This is consistent with established echo AI benchmarks
+                    including EchoNet-Dynamic, and reflects realistic deployment conditions in heterogeneous
+                    clinical environments.
                 </div>
             </div>
 
@@ -299,6 +302,81 @@
                     We recommend characterising missingness in the validation set locally to inform your
                     design decisions. Per-split missingness statistics will not be released prior to
                     test-set evaluation.
+                </div>
+            </div>
+
+            <!-- Row 7 -->
+            <div class="faq-card">
+                <div class="faq-question">Does our paper need to be accepted to appear on the leaderboard?</div>
+                <div class="faq-answer">
+                    No. Leaderboard eligibility is determined by a desk check, not peer review outcome.
+                    Any team that submits a valid paper by <strong>1 July 2026</strong> and passes the
+                    desk check will be eligible for test-set evaluation and leaderboard inclusion,
+                    regardless of whether the paper is accepted into the workshop proceedings. Peer
+                    review runs in parallel and determines proceedings inclusion only.
+                    <br><br>
+                    The desk check criteria are:
+                    <ol style="margin-top: 10px; margin-left: 20px; line-height: 2;">
+                        <li>Minimum 4 pages in LNCS format (excluding references)</li>
+                        <li>Contains a clearly identifiable Methods section describing the algorithm</li>
+                        <li>Reports at least one quantitative result on the validation set for the task(s) entered</li>
+                        <li>At least one author is a registered team member on Synapse</li>
+                    </ol>
+                    Desk check results will be communicated within <strong>two weeks</strong> of the paper deadline.
+                    <br><br>
+                    There is no cap on the number of paper co-authors. The six-member cap applies to
+                    the registered Synapse team only. Co-authors not registered as team members are
+                    not eligible for awards.
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question">Who qualifies for the joint challenge summary paper?</div>
+                <div class="faq-answer">
+                    The top 3 ranked teams per task will be invited to contribute to the joint challenge
+                    summary paper. Eligibility is based solely on final leaderboard rank and compliance
+                    with challenge rules and submission requirements. No subjective criteria such as
+                    technical novelty or code quality are applied.
+                    <br><br>
+                    Each qualifying team may nominate up to three co-authors. Given that Tasks 1, 2, and
+                    3 have independent leaderboards, a team performing well across multiple tasks may be
+                    invited to contribute to more than one task's summary.
+                </div>
+            </div>
+
+            <!-- Row 8 -->
+            <div class="faq-card">
+                <div class="faq-question">Does the methodology paper need to describe the exact final model?</div>
+                <div class="faq-answer">
+                    No. The paper submitted by 1 July describes your approach as it stands at that point.
+                    Your model may continue to evolve after the paper deadline. The Docker container
+                    submitted by <strong>1 August 2026</strong> represents your final method and is what
+                    gets evaluated on the test set.
+                    <br><br>
+                    The camera-ready version, due <strong>27 August 2026</strong>, may incorporate minor
+                    refinements and additional validation-set results. However, the core method must remain
+                    substantially the same as the reviewed version. Wholesale changes to the approach
+                    between the initial submission and the camera-ready are not permitted, as peer review
+                    is conducted on the initial version.
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question">Are there required sections in the methodology paper?</div>
+                <div class="faq-answer">
+                    No fixed structure is mandated beyond the LNCS format and 4 to 8 page requirement.
+                    We recommend the following structure as it covers the minimum content reviewers will
+                    expect:
+                    <ul style="margin-top: 10px; margin-left: 20px; line-height: 2;">
+                        <li><strong>Introduction:</strong> brief motivation and problem statement</li>
+                        <li><strong>Methods:</strong> description of your algorithm, architecture, and any
+                            external data or pretrained models used</li>
+                        <li><strong>Experiments:</strong> validation-set results using the official challenge
+                            metrics; this is a mandatory content requirement for desk check eligibility</li>
+                        <li><strong>Discussion / Conclusion:</strong> limitations and key findings</li>
+                    </ul>
+                    Disclosure of any external datasets or pretrained models used is mandatory and must
+                    appear in the paper per challenge Rule 6.
                 </div>
             </div>
 
