@@ -97,8 +97,7 @@
                     <ul style="margin-top: 10px; margin-left: 20px; line-height: 2;">
                         <li>A <strong>methodology paper</strong> (4–8 pages, LNCS format) submitted via the EchoRisk
                             OpenReview venue by <strong>7 July 2026</strong>. Papers should describe the method and
-                            validation-set results. Camera-ready versions (due 27 August 2026) may be updated to
-                            include final test-set results after Docker evaluation.
+                            validation-set results.
                         </li>
                         <li>A <strong>self-contained Docker image</strong> submitted via Synapse by
                             <strong>1 August 2026</strong>. Test-set access will only be granted to teams with a
@@ -152,6 +151,18 @@
                     <strong>no manual interventions</strong> (e.g., manual annotation of test cases). The use of public
                     external datasets and pre-trained models (e.g., EchoNet-Dynamic, foundation models) is permitted,
                     provided they are publicly available to all and explicitly disclosed in the methodology paper.
+                    <br><br>
+                    <strong>Cross-task data use (Task 3):</strong> Ground-truth Task 1 or Task 2 labels must not be used
+                    as direct inputs to a Task 3 pipeline, at any timepoint, for any patient. Auxiliary models may be
+                    trained on Task 1 or Task 2 public training data, or any other publicly available dataset, to
+                    predict
+                    LVEF or LV dysfunction from DICOM video, and those predictions may be used as inputs to Task 3.
+                    Auxiliary model input must be restricted to the DICOM video itself; standard temporal modelling
+                    within a single cine loop is unrestricted, but the model must not have access to timepoint, visit
+                    order, or patient trajectory information across visits. Auxiliary model architecture, training data
+                    source, and exact input schema must be disclosed in the methodology paper. Submissions with
+                    disclosed methodology inconsistent with observed inference behaviour may be excluded from the joint
+                    summary paper at the organisers' discretion.
                 </div>
             </div>
 
@@ -196,7 +207,7 @@
                     firm requirement, consistent with major MICCAI challenges such as HECKTOR and BraTS.
                     <br><br>
                     The paper submitted by 7 July should describe your approach and validation-set results as they
-                    stand at that point. The camera-ready version, due <strong>27 August 2026</strong>, may
+                    stand at that point. The camera-ready version, due <strong>13 August 2026</strong>, may
                     incorporate minor refinements and additional validation-set results. The core method must
                     remain substantially the same as the reviewed version. Whether final test-set results can be
                     included in the camera-ready will depend on evaluation timeline and will be communicated to
@@ -354,7 +365,7 @@
                     submitted by <strong>1 August 2026</strong> represents your final method and is what
                     gets evaluated on the test set.
                     <br><br>
-                    The camera-ready version, due <strong>27 August 2026</strong>, may incorporate minor
+                    The camera-ready version, due <strong>13 August 2026</strong>, may incorporate minor
                     refinements and additional validation-set results. However, the core method must remain
                     substantially the same as the reviewed version. Wholesale changes to the approach
                     between the initial submission and the camera-ready are not permitted, as peer review
