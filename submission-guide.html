@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/svg+xml"
+          href="data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='50' fill='%2304080f'/%3E%3Ccircle cx='50' cy='50' r='47' fill='none' stroke='%23e8edf5' stroke-width='3'/%3E%3Cpath d='M18 28 Q8 50 18 72' fill='none' stroke='%2300c9a7' stroke-width='3.5' stroke-linecap='round'/%3E%3Cpath d='M82 28 Q92 50 82 72' fill='none' stroke='%234f8eff' stroke-width='3.5' stroke-linecap='round'/%3E%3Cline x1='50' y1='14' x2='18' y2='56' stroke='%2300c9a7' stroke-width='2.5' stroke-linecap='round'/%3E%3Cline x1='50' y1='14' x2='82' y2='56' stroke='%234f8eff' stroke-width='2.5' stroke-linecap='round'/%3E%3Cpath d='M18 56 Q50 78 82 56' fill='none' stroke='%234f8eff' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M50 58 C50 58 34 46 34 37 C34 31 39 27 44 27 C47 27 50 30 50 30 C50 30 53 27 56 27 C61 27 66 31 66 37 C66 46 50 58 50 58 Z' fill='%23e8edf5'/%3E%3Cg stroke='%23e8edf5' stroke-width='1' fill='none' opacity='0.85'%3E%3Cline x1='40' y1='38' x2='47' y2='33'/%3E%3Cline x1='40' y1='38' x2='50' y2='42'/%3E%3Cline x1='47' y1='33' x2='57' y2='36'/%3E%3Cline x1='57' y1='36' x2='50' y2='42'/%3E%3Cline x1='57' y1='36' x2='60' y2='44'/%3E%3Cline x1='50' y1='42' x2='60' y2='44'/%3E%3Cline x1='40' y1='38' x2='44' y2='46'/%3E%3Cline x1='44' y1='46' x2='50' y2='42'/%3E%3C/g%3E%3Ccircle cx='40' cy='38' r='2.5' fill='%23e8edf5'/%3E%3Ccircle cx='47' cy='33' r='2.5' fill='%23e8edf5'/%3E%3Ccircle cx='57' cy='36' r='2.5' fill='%23e8edf5'/%3E%3Ccircle cx='50' cy='42' r='2.5' fill='%23e8edf5'/%3E%3Ccircle cx='60' cy='44' r='2.5' fill='%23e8edf5'/%3E%3Ccircle cx='44' cy='46' r='2.5' fill='%23e8edf5'/%3E%3Ccircle cx='57' cy='36' r='3.5' fill='%23ff6b6b'/%3E%3Cpolyline points='22,66 30,66 33,60 36,72 39,63 42,68 46,66 54,66 57,60 60,72 63,63 66,68 70,66 78,66' fill='none' stroke='%2300c9a7' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+    <title>EchoRisk-MICCAI 2026 | Docker Submission Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/echorisk.css">
+</head>
+<body>
+
+<div class="bg-grid"></div>
+
+<nav>
+    <div style="display: flex; align-items: center; gap: 24px;">
+
+        <a href="index.html" class="nav-logo"
+           style="text-decoration: none; display: flex; align-items: center; position: relative; top: 18px;">
+            <img src="assets/logos/echorisk_logo.png" alt="EchoRisk Logo"
+                 style="width: 105px; height: 105px; object-fit: contain; display: block;">
+        </a>
+
+        <a href="https://conferences.miccai.org/2026/en/default.asp" target="_blank" rel="noopener noreferrer"
+           style="display: flex; align-items: center; border-left: 1px solid var(--border); padding-left: 24px;">
+            <img src="assets/logos/miccai2026-mobile-logo-france.png" alt="MICCAI 2026"
+                 style="height: 110px; width: auto; object-fit: contain; display: block; transition: transform 0.2s ease;"
+                 onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">About</a></li>
+        <li><a href="keynote.html">Keynote</a></li>
+        <li><a href="tasks.html">Tasks</a></li>
+        <li><a href="dataset.html">Dataset</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a href="rules.html">Rules & FAQ</a></li>
+        <li><a href="submission-guide.html" class="active">Submission Guide</a></li>
+        <li><a href="papers.html">Paper Submission</a></li>
+        <li><a href="https://www.synapse.org/Synapse:syn72001386" class="nav-cta" target="_blank">Register →</a></li>
+        <li style="display: flex; align-items: center; margin-left: 10px;">
+            <span style="color: var(--border); margin: 0 15px; font-weight: 300; font-size: 20px;">|</span>
+            <a href="https://github.com/echorisk-miccai" target="_blank" aria-label="GitHub Organization"
+               style="display: flex; align-items: center; opacity: 0.7; transition: opacity 0.2s;"
+               onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.7">
+                <svg height="24" viewBox="0 0 16 16" width="24" fill="var(--text)">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+            </a>
+        </li>
+    </ul>
+    <label for="nav-toggle" class="nav-hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+    </label>
+    <input type="checkbox" id="nav-toggle" style="display:none;">
+</nav>
+
+<div class="affiliation-bar">
+    <span style="width:8px; height:8px; background:var(--accent2); border-radius:50%; display:inline-block; flex-shrink:0;"></span>
+    MICCAI 2026 CARDIAC IMAGING THEME &nbsp;·&nbsp; JOINTLY WITH THE
+    <a href="https://stacom.github.io/stacom2026/" target="_blank" rel="noopener noreferrer"
+       style="color:var(--accent2); text-decoration:none; font-weight:600;">STACOM WORKSHOP</a>
+</div>
+
+<section class="page-header" style="padding-bottom: 40px;">
+    <div class="container" style="max-width: 900px;">
+        <p class="section-label">// Logistics</p>
+        <h2 class="section-title">Docker Submission Guide</h2>
+        <p class="section-desc">Step-by-step instructions for preparing, testing, and submitting your final Docker
+            container. Follow these steps in order. Test-set evaluation is manual and offline: there is no interim
+            feedback, so a container that fails to run will not be flagged until after the deadline has closed.</p>
+
+        <div style="margin: 0 0 40px; background: rgba(0,201,167,0.06); border: 1px solid rgba(0,201,167,0.35); border-radius: 8px; padding: 18px 22px; font-family: var(--body-font); font-size: 14.5px; line-height: 1.7; color: var(--text);">
+            <strong>Deadline update:</strong> the final Docker submission deadline has been extended from
+            1&nbsp;August&nbsp;2026 to <strong>20&nbsp;August&nbsp;2026</strong> to allow time to publish
+            the full container harness specification referenced in Step&nbsp;3 below. This does not affect the
+            results release date of 7&nbsp;October&nbsp;2026. Steps marked <em>coming soon</em> will be completed
+            once the harness specification is published; all other steps below are final and can be acted on now.
+        </div>
+
+        <div class="rules-list">
+
+            <!-- Step 1 -->
+            <div class="rule-item">
+                <div class="rule-number">1</div>
+                <div class="rule-text">
+                    Submission rights on all three evaluation queues are granted to members of the
+                    <a href="https://www.synapse.org/Team:3603440" target="_blank" rel="noopener noreferrer"
+                       style="color:var(--accent2); text-decoration:none; border-bottom:1px solid rgba(79,142,255,0.3);">
+                        EchoRisk-MICCAI Submitters</a> team. Membership is added <strong>automatically</strong> for
+                    the team member whose Synapse User Profile URL was supplied on the official
+                    <strong>EchoRisk-MICCAI 2026 Team Registration form</strong>. You do not need to request access
+                    if you are that person.
+                    <br><br>
+                    If you cannot see a <strong>Submit</strong> button on the evaluation queues described in
+                    Step&nbsp;2, it is almost always one of the following:
+                    <ul style="margin-top: 10px; margin-left: 20px; line-height: 2;">
+                        <li>You are not the team member who filled in the registration form, so you were never
+                            added to the Submitters team</li>
+                        <li>The registration form was submitted with a missing or incorrect Synapse Profile URL</li>
+                        <li>Your team wants additional members beyond the original registrant to be able to submit</li>
+                    </ul>
+                    In any of these cases, email
+                    <a href="mailto:echorisk.miccai@gmail.com" style="color:var(--accent2); text-decoration:none;">echorisk.miccai@gmail.com</a>
+                    with your team name and the Synapse username(s) to be added to Team&nbsp;3603440. Requests are
+                    turned around within one business day, but should be sent well ahead of the deadline rather than
+                    on the day it closes.
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="rule-item">
+                <div class="rule-number">2</div>
+                <div class="rule-text">
+                    <strong>Locate the evaluation queue for your task.</strong> All three evaluation queues are
+                    accessed from the <strong>Challenge</strong> tab on the EchoRisk-MICCAI Synapse project, not the
+                    project's default landing page. Each task has its own dedicated queue; submit only to the
+                    queue(s) matching the task(s) you are entering.
+                    <ul style="margin-top: 10px; margin-left: 20px; line-height: 2;">
+                        <li>Task 1 — Cardiac Function Estimation: Evaluation Queue 9620025</li>
+                        <li>Task 2 — Assessment of LV Dysfunction: Evaluation Queue 9620026</li>
+                        <li>Task 3 — Early Prediction of Therapy-Induced Cardiotoxicity: Evaluation Queue 9620027</li>
+                    </ul>
+                    These are the <strong>final test-set queues only</strong>. There is no validation leaderboard or
+                    interim feedback associated with them; submitted containers are run against the hidden test set
+                    by the organisers after the deadline closes.
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="rule-item">
+                <div class="rule-number">3</div>
+                <div class="rule-text">
+                    <strong>Prepare your predictions and container.</strong> This step has two parts. The prediction
+                    format is final and documented now; the container harness contract is not yet published.
+                    <br><br>
+                    <strong>Prediction format (confirmed).</strong> The scoring code in the evaluation repository
+                    defines the exact CSV your model must produce per task, keyed by
+                    <code>(patient_id, timepoint)</code>, covering every exam in the ground-truth set:
+                    <br><br>
+                    <a href="https://github.com/EchoRisk-MICCAI/echorisk-benchmark/tree/master/evaluation"
+                       target="_blank" rel="noopener noreferrer"
+                       style="color:var(--accent2); text-decoration:none; border-bottom:1px solid rgba(79,142,255,0.3);">
+                        github.com/EchoRisk-MICCAI/echorisk-benchmark/tree/master/evaluation</a>
+                    <ul style="margin-top: 10px; margin-left: 20px; line-height: 2;">
+                        <li>Task 1: <code>lvef_pred</code>, float in [0, 100]</li>
+                        <li>Task 2: <code>dysfunction_pred</code>, calibrated probability in [0, 1], not a hard label</li>
+                        <li>Task 3: <code>cardiotoxicity_pred</code>, calibrated probability in [0, 1], baseline (T1) only</li>
+                    </ul>
+                    Run the official scorer locally on the validation set before packaging, so your offline numbers
+                    match what the leaderboard will compute:
+                    <div style="margin-top: 12px; background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 8px; padding: 14px 20px; font-family: var(--mono-font); font-size: 13px; line-height: 1.8; overflow-x: auto; color: var(--text);">
+                        pip install -e "./evaluation[test]"<br>
+                        echorisk-score --task 1 --predictions preds.csv --ground-truth gt.csv
+                    </div>
+                    <p style="margin-top: 10px;">
+                        The scorer enforces schema strictly: missing exams, out-of-range values, duplicate
+                        <code>(patient_id, timepoint)</code> keys, and missing columns are all rejected. A clean
+                        local run is a genuine correctness signal, not just a formality.
+                    </p>
+                    <p style="margin-top: 14px; padding: 12px 16px; background: rgba(255,107,107,0.06); border: 1px solid rgba(255,107,107,0.3); border-radius: 6px;">
+                        <strong>Container harness contract — coming soon.</strong> The entrypoint invocation, input
+                        mount path, output file path, and base image/GPU requirements for the containerised
+                        evaluation harness are not yet published here. This section will be completed before the
+                        new submission deadline above. Do not finalise your Dockerfile against assumed paths;
+                        check back here first.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="rule-item">
+                <div class="rule-number">4</div>
+                <div class="rule-text">
+                    <strong>Test offline before submitting.</strong> Per Challenge Rule&nbsp;6, containers must run
+                    fully automatically with <strong>no manual intervention, no internet access, and no external
+                    API calls at inference time</strong>. Validate this locally before submission:
+                    <div style="margin-top: 14px; background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; font-family: var(--mono-font); font-size: 13px; line-height: 1.9; overflow-x: auto; color: var(--text);">
+                        docker run --rm --network none --gpus all \<br>
+                        &nbsp;&nbsp;-v /path/to/local/test_case:/input:ro \<br>
+                        &nbsp;&nbsp;-v /path/to/local/output:/output \<br>
+                        &nbsp;&nbsp;your-image:tag
+                    </div>
+                    <p style="margin-top: 10px;">
+                        <code>--network none</code> reproduces the offline evaluation environment. If your container
+                        depends on a runtime download (model weights, tokeniser files, API calls), it will fail
+                        evaluation. The mount paths shown above are illustrative only; the exact paths the harness
+                        uses will be confirmed in Step&nbsp;3 once the harness specification is published.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="rule-item">
+                <div class="rule-number">5</div>
+                <div class="rule-text">
+                    <strong>Submit via the evaluation queue.</strong> Open the queue for your task on Synapse and use
+                    the <strong>Submit</strong> button to push your image. You may resubmit at any point before the
+                    deadline to update your container; only your <strong>last submission</strong> is evaluated,
+                    consistent with Challenge Rule&nbsp;2.
+                </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="rule-item">
+                <div class="rule-number">6</div>
+                <div class="rule-text">
+                    <strong>Deadline and what happens after.</strong> The submission window closes on
+                    <strong>20&nbsp;August&nbsp;2026</strong>, extended from the original 1&nbsp;August&nbsp;2026
+                    date to allow the container harness specification (Step&nbsp;3) to be published in time for teams
+                    to act on it. After the deadline, organisers run all final containers against the hidden test
+                    set. No test-set metrics are visible to participants before or during this process. Results are
+                    still released on <strong>27&nbsp;September&nbsp;2026</strong> during the MICCAI Annual Meeting;
+                    the extension does not affect this date.
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section style="padding: 60px 0 100px;">
+    <div class="container" style="max-width: 900px;">
+        <p class="section-label" style="text-align: center;">// Q&A</p>
+        <h2 class="section-title" style="text-align: center;">Submission FAQ</h2>
+
+        <div class="faq-grid">
+
+            <div class="faq-card">
+                <div class="faq-question">I accepted the Synapse Team invitation. Why can't I submit?</div>
+                <div class="faq-answer">
+                    Submission rights come from a separate team, <a href="https://www.synapse.org/Team:3603440" target="_blank" rel="noopener noreferrer" style="color:var(--accent2); text-decoration:none;">EchoRisk-MICCAI Submitters</a>,
+                    populated automatically from the Synapse Profile URL given on your registration form. See
+                    Step&nbsp;1 above for the three most common reasons this hasn't happened, then contact
+                    <a href="mailto:echorisk.miccai@gmail.com" style="color:var(--accent2); text-decoration:none;">echorisk.miccai@gmail.com</a>
+                    with your team name and Synapse username(s).
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question">Is there a template or example repository to follow?</div>
+                <div class="faq-answer">
+                    The <a href="https://github.com/EchoRisk-MICCAI/echorisk-benchmark/tree/master/evaluation"
+                       target="_blank" rel="noopener noreferrer"
+                       style="color:var(--accent2); text-decoration:none;">evaluation repository</a> defines the
+                    final prediction CSV format and the official local scorer now. The container harness
+                    specification (entrypoint, mount paths, base image) is not yet published; see Step&nbsp;3.
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question">Can I submit different containers for different tasks?</div>
+                <div class="faq-answer">
+                    Yes. Each task has its own evaluation queue (see Step&nbsp;2) and is evaluated independently.
+                    Submit only to the queue(s) for the task(s) you are entering.
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question">Why was the deadline extended?</div>
+                <div class="faq-answer">
+                    To give teams enough time to act on the container harness specification once it is published
+                    (Step&nbsp;3), rather than packaging against assumed paths. The extension does not affect the
+                    results release date of 27&nbsp;September&nbsp;2026.
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question">Will I get feedback if my container fails?</div>
+                <div class="faq-answer">
+                    No. These are hidden test-set queues with no interim leaderboard or feedback. This is why
+                    offline testing before submission (Step&nbsp;4) is essential; a container that fails to run
+                    cannot be corrected after the deadline closes.
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <h2 class="cta-title">Ready to submit?</h2>
+    <a href="https://www.synapse.org/Synapse:syn72001386" class="btn-primary"
+       style="margin:0 auto; display:inline-flex;">Go to Synapse →</a>
+    <p style="font-family:var(--mono-font); font-size:12px; color:var(--muted); margin-top:16px; letter-spacing:0.06em;">
+        Questions? <a href="mailto:echorisk.miccai@gmail.com"
+                      style="color:var(--accent2); text-decoration:none; border-bottom:1px solid rgba(79,142,255,0.3);">echorisk.miccai@gmail.com</a>
+    </p>
+</section>
+
+<div class="partner-logos-container">
+    <div class="partner-logos-row">
+        <div class="logo-wrapper" data-name="CARDIOCARE Project">
+            <a href="https://cardiocare-project.eu/" target="_blank" rel="noopener"><img
+                    src="assets/logos/cardiocare-logo.png" alt="CARDIOCARE" class="partner-logo-img"></a>
+        </div>
+        <div class="logo-wrapper" data-name="Foundation for Research and Technology - Hellas">
+            <a href="https://www.ics.forth.gr/cbml/?lang=en" target="_blank" rel="noopener"><img
+                    src="assets/logos/forth-logo.png" alt="FORTH" class="partner-logo-img"></a>
+        </div>
+        <div class="logo-wrapper" data-name="University of Ioannina">
+            <a href="https://medlab.cc.uoi.gr/" target="_blank" rel="noopener"><img src="assets/logos/uoi-logo.svg"
+                                                                                    alt="UOI" class="partner-logo-img"></a>
+        </div>
+        <div class="logo-wrapper" data-name="Hellenic Mediterranean University">
+            <a href="https://bmi.hmu.gr/" target="_blank" rel="noopener"><img src="assets/logos/hmu-logo.png" alt="HMU"
+                                                                              class="partner-logo-img"></a>
+        </div>
+    </div>
+
+    <div class="partner-logos-row">
+        <div class="logo-wrapper" data-name="National and Kapodistrian University of Athens">
+            <a href="https://en.uoa.gr/" target="_blank" rel="noopener"><img src="assets/logos/nkua-logo.png" alt="NKUA"
+                                                                             class="partner-logo-img"></a>
+        </div>
+        <div class="logo-wrapper" data-name="Bank of Cyprus Oncology Centre">
+            <a href="https://www.bococ.org.cy/en" target="_blank" rel="noopener"><img src="assets/logos/bococ-logo.png"
+                                                                                      alt="BOCOC"
+                                                                                      class="partner-logo-img"></a>
+        </div>
+        <div class="logo-wrapper" data-name="European Institute of Oncology">
+            <a href="https://www.ieo.it/en/" target="_blank" rel="noopener"><img src="assets/logos/ieo-logo.png"
+                                                                                 alt="IEO" class="partner-logo-img"></a>
+        </div>
+        <div class="logo-wrapper" data-name="Karolinska University Hospital">
+            <a href="https://www.karolinskahospital.com/" target="_blank" rel="noopener"><img
+                    src="assets/logos/karolinska-logo.png"
+                    alt="KSBC"
+                    class="partner-logo-img"></a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-bottom"
+         style="display:flex; flex-direction:column; align-items:center; gap:12px; text-align:center;">
+        <div style="display:flex; justify-content:space-between; align-items:center; width:100%; flex-wrap:wrap; gap:12px;">
+            <p>© 2026 EchoRisk-MICCAI. All rights reserved.</p>
+            <a href="mailto:echorisk.miccai@gmail.com"
+               style="font-family:var(--mono-font); font-size:11px; color:var(--muted); text-decoration:none; letter-spacing:0.06em; transition:color 0.2s;"
+               onmouseover="this.style.color='var(--accent2)'"
+               onmouseout="this.style.color='var(--muted)'">echorisk.miccai@gmail.com</a>
+        </div>
+        <p style="font-size:11px; line-height:1.5; color:var(--muted); font-family:var(--body-font);">
+            The <strong>CARDIOCARE</strong> project has received funding from the European Union's Horizon 2020
+            research and innovation programme under grant agreement No&nbsp;945175.
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
