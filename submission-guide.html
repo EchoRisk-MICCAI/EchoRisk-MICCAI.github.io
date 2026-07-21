@@ -80,8 +80,8 @@
         <div style="margin: 0 0 40px; background: rgba(0,201,167,0.06); border: 1px solid rgba(0,201,167,0.35); border-radius: 8px; padding: 18px 22px; font-family: var(--body-font); font-size: 14.5px; line-height: 1.7; color: var(--text);">
             <strong>Deadline update:</strong> the final Docker submission deadline has been extended from
             1&nbsp;August&nbsp;2026 to <strong>20&nbsp;August&nbsp;2026</strong> to allow time to publish
-            the full container harness specification referenced in Step&nbsp;3 below. This does not affect the
-            results release date of 7&nbsp;October&nbsp;2026. Steps marked <em>coming soon</em> will be completed
+            the full container harness specification referenced in Step&nbsp;4 below. This does not affect the
+            results release date of 27&nbsp;September&nbsp;2026. Steps marked <em>coming soon</em> will be completed
             once the harness specification is published; all other steps below are final and can be acted on now.
         </div>
 
@@ -91,6 +91,30 @@
             <div class="rule-item">
                 <div class="rule-number">1</div>
                 <div class="rule-text">
+                    <strong>Confirm your Synapse account is a Certified User.</strong> This is a Synapse-wide
+                    requirement, separate from anything specific to this challenge, and it silently blocks Docker
+                    push and submission with no explanatory error shown anywhere in the challenge interface.
+                    <ul style="margin-top: 10px; margin-left: 20px; line-height: 2;">
+                        <li>Go to your Synapse account: click your profile icon → <strong>Settings</strong> →
+                            <strong>Trust &amp; Credentials</strong></li>
+                        <li>If it shows <strong>Certification: Incomplete</strong>, click
+                            <strong>Take The Certification Quiz</strong> (roughly 15 minutes, ~15 questions on
+                            Synapse data governance)</li>
+                        <li>Submit the quiz and confirm the page now shows Certification: Complete</li>
+                    </ul>
+                    <p style="margin-top: 10px; padding: 12px 16px; background: rgba(255,107,107,0.06); border: 1px solid rgba(255,107,107,0.3); border-radius: 6px;">
+                        <strong>Do this before attempting anything else in this guide.</strong> An uncertified
+                        account can be a member of the Submitters team with "Can submit" access on every queue and
+                        still be unable to push an image or submit, with no error message explaining why. If you get
+                        stuck on any later step, check this first.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="rule-item">
+                <div class="rule-number">2</div>
+                <div class="rule-text">
                     Submission rights on all three evaluation queues are granted to members of the
                     <a href="https://www.synapse.org/Team:3603440" target="_blank" rel="noopener noreferrer"
                        style="color:var(--accent2); text-decoration:none; border-bottom:1px solid rgba(79,142,255,0.3);">
@@ -99,44 +123,53 @@
                     <strong>EchoRisk-MICCAI 2026 Team Registration form</strong>. You do not need to request access
                     if you are that person.
                     <br><br>
-                    If you cannot see a <strong>Submit</strong> button on the evaluation queues described in
-                    Step&nbsp;2, it is almost always one of the following:
+                    <strong>Only one designated contact per team is granted submission access</strong>, regardless
+                    of team size. Your team's official entry is whichever container that person uploads; there is
+                    no need or ability for multiple members to submit independently. To change who your designated
+                    submitter is, email
+                    <a href="mailto:echorisk.miccai@gmail.com" style="color:var(--accent2); text-decoration:none;">echorisk.miccai@gmail.com</a>
+                    with the new Synapse Profile URL.
+                    <br><br>
+                    If you cannot complete Step&nbsp;5 below, it is almost always one of the following:
                     <ul style="margin-top: 10px; margin-left: 20px; line-height: 2;">
+                        <li>Your account is not yet a Certified User (Step&nbsp;1)</li>
                         <li>You are not the team member who filled in the registration form, so you were never
                             added to the Submitters team</li>
                         <li>The registration form was submitted with a missing or incorrect Synapse Profile URL</li>
-                        <li>Your team wants additional members beyond the original registrant to be able to submit</li>
+                        <li>You are a teammate other than the designated submitter — access is not extended
+                            automatically to additional members; email us to change the designated contact instead</li>
                     </ul>
                     In any of these cases, email
                     <a href="mailto:echorisk.miccai@gmail.com" style="color:var(--accent2); text-decoration:none;">echorisk.miccai@gmail.com</a>
-                    with your team name and the Synapse username(s) to be added to Team&nbsp;3603440. Requests are
-                    turned around within one business day, but should be sent well ahead of the deadline rather than
-                    on the day it closes.
-                </div>
-            </div>
-
-            <!-- Step 2 -->
-            <div class="rule-item">
-                <div class="rule-number">2</div>
-                <div class="rule-text">
-                    <strong>Locate the evaluation queue for your task.</strong> All three evaluation queues are
-                    accessed from the <strong>Challenge</strong> tab on the EchoRisk-MICCAI Synapse project, not the
-                    project's default landing page. Each task has its own dedicated queue; submit only to the
-                    queue(s) matching the task(s) you are entering.
-                    <ul style="margin-top: 10px; margin-left: 20px; line-height: 2;">
-                        <li>Task 1 — Cardiac Function Estimation: Evaluation Queue 9620025</li>
-                        <li>Task 2 — Assessment of LV Dysfunction: Evaluation Queue 9620026</li>
-                        <li>Task 3 — Early Prediction of Therapy-Induced Cardiotoxicity: Evaluation Queue 9620027</li>
-                    </ul>
-                    These are the <strong>final test-set queues only</strong>. There is no validation leaderboard or
-                    interim feedback associated with them; submitted containers are run against the hidden test set
-                    by the organisers after the deadline closes.
+                    with your team name and the Synapse username to be set as your designated submitter. Requests
+                    are turned around within one business day, but should be sent well ahead of the deadline rather
+                    than on the day it closes.
                 </div>
             </div>
 
             <!-- Step 3 -->
             <div class="rule-item">
                 <div class="rule-number">3</div>
+                <div class="rule-text">
+                    <strong>Identify the evaluation queue for your task.</strong> Each task has its own dedicated
+                    queue; you will select the correct one by name at the final step of submission (Step&nbsp;6),
+                    not by visiting the Challenge page first. Note the exact queue name for your task(s) now:
+                    <ul style="margin-top: 10px; margin-left: 20px; line-height: 2;">
+                        <li>Task 1 — Cardiac Function Estimation: <code>EchoRisk-MICCAI 2026 - Docker Submission (Task 1)</code></li>
+                        <li>Task 2 — Assessment of LV Dysfunction: <code>EchoRisk-MICCAI 2026 - Docker Submission (Task 2)</code></li>
+                        <li>Task 3 — Early Prediction of Therapy-Induced Cardiotoxicity: <code>EchoRisk-MICCAI 2026 - Docker Submission (Task 3)</code></li>
+                    </ul>
+                    These are the <strong>final test-set queues only</strong>. There is no validation leaderboard or
+                    interim feedback associated with them; submitted containers are run against the hidden test set
+                    by the organisers after the deadline closes. The Challenge project's Wiki page lists these
+                    queues for reference, but there is no submission action available there; submission is always
+                    initiated from your own project, described in Step&nbsp;6.
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="rule-item">
+                <div class="rule-number">4</div>
                 <div class="rule-text">
                     <strong>Prepare your predictions and container.</strong> This step has two parts. The prediction
                     format is final and documented now; the container harness contract is not yet published.
@@ -175,9 +208,9 @@
                 </div>
             </div>
 
-            <!-- Step 4 -->
+            <!-- Step 5 -->
             <div class="rule-item">
-                <div class="rule-number">4</div>
+                <div class="rule-number">5</div>
                 <div class="rule-text">
                     <strong>Test offline before submitting.</strong> Per Challenge Rule&nbsp;6, containers must run
                     fully automatically with <strong>no manual intervention, no internet access, and no external
@@ -192,19 +225,8 @@
                         <code>--network none</code> reproduces the offline evaluation environment. If your container
                         depends on a runtime download (model weights, tokeniser files, API calls), it will fail
                         evaluation. The mount paths shown above are illustrative only; the exact paths the harness
-                        uses will be confirmed in Step&nbsp;3 once the harness specification is published.
+                        uses will be confirmed in Step&nbsp;4 once the harness specification is published.
                     </p>
-                </div>
-            </div>
-
-            <!-- Step 5 -->
-            <div class="rule-item">
-                <div class="rule-number">5</div>
-                <div class="rule-text">
-                    <strong>Submit via the evaluation queue.</strong> Open the queue for your task on Synapse and use
-                    the <strong>Submit</strong> button to push your image. You may resubmit at any point before the
-                    deadline to update your container; only your <strong>last submission</strong> is evaluated,
-                    consistent with Challenge Rule&nbsp;2.
                 </div>
             </div>
 
@@ -212,9 +234,55 @@
             <div class="rule-item">
                 <div class="rule-number">6</div>
                 <div class="rule-text">
+                    <strong>Submit your container.</strong> Docker submissions are <strong>not</strong> made from a
+                    button on the Challenge page. The Challenge page never shows a "Submit" option for Docker
+                    queues; submission is initiated from your own Synapse project instead. Only your team's
+                    designated submitter (Step&nbsp;2) can complete this. Follow these steps in order:
+                    <ol style="margin-top: 10px; margin-left: 20px; line-height: 2.1;">
+                        <li>Create (or use an existing) <strong>Synapse Project</strong> that you own, this is
+                            where your image will be pushed to, not the challenge project itself</li>
+                        <li>Get your Docker registry credentials: go to <strong>Account Settings</strong> →
+                            <strong>Personal Access Tokens</strong>, create a new token with at least
+                            <strong>View, Download, Modify</strong> scope, and copy it (shown only once)</li>
+                        <li>From your terminal, log in to Synapse's Docker registry:
+                            <div style="margin-top: 10px; background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 8px; padding: 12px 18px; font-family: var(--mono-font); font-size: 13px; line-height: 1.8; overflow-x: auto; color: var(--text);">
+                                docker login docker.synapse.org
+                            </div>
+                            using your Synapse username and the Personal Access Token as the password
+                        </li>
+                        <li>Tag and push your image, using your own project's SynID (found on your project page,
+                            format <code>synXXXXXXXX</code>):
+                            <div style="margin-top: 10px; background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 8px; padding: 12px 18px; font-family: var(--mono-font); font-size: 13px; line-height: 1.8; overflow-x: auto; color: var(--text);">
+                                docker tag your-image:tag docker.synapse.org/synXXXXXXXX/your-image:tag<br>
+                                docker push docker.synapse.org/synXXXXXXXX/your-image:tag
+                            </div>
+                        </li>
+                        <li>Go to your project in Synapse, click the <strong>Docker</strong> tab, refresh if
+                            needed, your pushed image should now be listed there</li>
+                        <li>Click on the image entry, then click <strong>Docker Repository Tools</strong> →
+                            <strong>Submit Docker Repository to Challenge</strong></li>
+                        <li>In the dialog, select the evaluation queue matching your task (Step&nbsp;3), and
+                            confirm</li>
+                    </ol>
+                    <p style="margin-top: 12px; padding: 12px 16px; background: rgba(255,107,107,0.06); border: 1px solid rgba(255,107,107,0.3); border-radius: 6px;">
+                        <strong>If the push fails with "insufficient_scope" or "access denied":</strong> this is
+                        almost always the Step&nbsp;1 certification requirement, not a token or permissions problem.
+                        Confirm Trust &amp; Credentials shows Certification: Complete, then retry the push.
+                    </p>
+                    <p style="margin-top: 10px;">
+                        You may resubmit at any point before the deadline to update your container; only your
+                        <strong>last submission</strong> is evaluated, consistent with Challenge Rule&nbsp;2.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 7 -->
+            <div class="rule-item">
+                <div class="rule-number">7</div>
+                <div class="rule-text">
                     <strong>Deadline and what happens after.</strong> The submission window closes on
                     <strong>20&nbsp;August&nbsp;2026</strong>, extended from the original 1&nbsp;August&nbsp;2026
-                    date to allow the container harness specification (Step&nbsp;3) to be published in time for teams
+                    date to allow the container harness specification (Step&nbsp;4) to be published in time for teams
                     to act on it. After the deadline, organisers run all final containers against the hidden test
                     set. No test-set metrics are visible to participants before or during this process. Results are
                     still released on <strong>27&nbsp;September&nbsp;2026</strong> during the MICCAI Annual Meeting;
@@ -234,13 +302,47 @@
         <div class="faq-grid">
 
             <div class="faq-card">
+                <div class="faq-question">Docker push fails with "insufficient_scope" or "access denied"</div>
+                <div class="faq-answer">
+                    This is the single most common blocker and is almost never a token or team-permissions issue.
+                    Go to Synapse Account Settings → <strong>Trust &amp; Credentials</strong> and confirm your
+                    account shows <strong>Certification: Complete</strong>. If it shows Incomplete, click
+                    <strong>Take The Certification Quiz</strong> and retry the push immediately after. See
+                    Step&nbsp;1 above.
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question">I don't see a Submit button on the Challenge page</div>
+                <div class="faq-answer">
+                    Correct, there isn't one for Docker submissions. The Challenge page only ever shows evaluation
+                    queue descriptions, not a submit action. Submission is initiated from your own Synapse project
+                    via <strong>Docker Repository Tools → Submit Docker Repository to Challenge</strong>, after
+                    pushing your image there. See Step&nbsp;6 above for the full sequence.
+                </div>
+            </div>
+
+            <div class="faq-card">
                 <div class="faq-question">I accepted the Synapse Team invitation. Why can't I submit?</div>
                 <div class="faq-answer">
                     Submission rights come from a separate team, <a href="https://www.synapse.org/Team:3603440" target="_blank" rel="noopener noreferrer" style="color:var(--accent2); text-decoration:none;">EchoRisk-MICCAI Submitters</a>,
                     populated automatically from the Synapse Profile URL given on your registration form. See
-                    Step&nbsp;1 above for the three most common reasons this hasn't happened, then contact
+                    Step&nbsp;2 above for the most common reasons this hasn't happened (including certification,
+                    Step&nbsp;1, and the one-designated-submitter policy below), then contact
                     <a href="mailto:echorisk.miccai@gmail.com" style="color:var(--accent2); text-decoration:none;">echorisk.miccai@gmail.com</a>
                     with your team name and Synapse username(s).
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question">Can more than one team member get submission access?</div>
+                <div class="faq-answer">
+                    No. Docker submission access is granted to one designated contact per team, matching the
+                    Synapse Profile URL on your Team Registration Form. Only one member needs access, since your
+                    team's official entry is whichever container that person uploads on the team's behalf. To
+                    change who this is, email
+                    <a href="mailto:echorisk.miccai@gmail.com" style="color:var(--accent2); text-decoration:none;">echorisk.miccai@gmail.com</a>
+                    with the new Synapse Profile URL.
                 </div>
             </div>
 
@@ -251,14 +353,14 @@
                        target="_blank" rel="noopener noreferrer"
                        style="color:var(--accent2); text-decoration:none;">evaluation repository</a> defines the
                     final prediction CSV format and the official local scorer now. The container harness
-                    specification (entrypoint, mount paths, base image) is not yet published; see Step&nbsp;3.
+                    specification (entrypoint, mount paths, base image) is not yet published; see Step&nbsp;4.
                 </div>
             </div>
 
             <div class="faq-card">
                 <div class="faq-question">Can I submit different containers for different tasks?</div>
                 <div class="faq-answer">
-                    Yes. Each task has its own evaluation queue (see Step&nbsp;2) and is evaluated independently.
+                    Yes. Each task has its own evaluation queue (see Step&nbsp;3) and is evaluated independently.
                     Submit only to the queue(s) for the task(s) you are entering.
                 </div>
             </div>
@@ -267,7 +369,7 @@
                 <div class="faq-question">Why was the deadline extended?</div>
                 <div class="faq-answer">
                     To give teams enough time to act on the container harness specification once it is published
-                    (Step&nbsp;3), rather than packaging against assumed paths. The extension does not affect the
+                    (Step&nbsp;4), rather than packaging against assumed paths. The extension does not affect the
                     results release date of 27&nbsp;September&nbsp;2026.
                 </div>
             </div>
@@ -276,7 +378,7 @@
                 <div class="faq-question">Will I get feedback if my container fails?</div>
                 <div class="faq-answer">
                     No. These are hidden test-set queues with no interim leaderboard or feedback. This is why
-                    offline testing before submission (Step&nbsp;4) is essential; a container that fails to run
+                    offline testing before submission (Step&nbsp;5) is essential; a container that fails to run
                     cannot be corrected after the deadline closes.
                 </div>
             </div>
