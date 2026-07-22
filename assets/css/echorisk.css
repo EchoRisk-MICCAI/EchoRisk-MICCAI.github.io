@@ -2098,3 +2098,32 @@ footer {
         padding: 72px 0 40px;
     }
 }
+
+.nav-badge {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 2px 7px;
+    font-size: 10px;
+    font-family: var(--mono-font);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: rgba(0, 201, 167, 0.15);
+    border: 1px solid rgba(0, 201, 167, 0.4);
+    border-radius: 10px;
+    color: var(--accent2);
+    vertical-align: middle;
+}
+
+
+.nav-highlight {
+    position: relative;
+    color: var(--accent2) !important;
+    font-weight: 600;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-docker-icon {
+    flex-shrink: 0;
+}
